@@ -25,4 +25,8 @@ autocmd FileType python set tabstop=4|set shiftwidth=4
 autocmd FileType c set tabstop=3|set shiftwidth=3
 
 "set size
-set lines=100 columns=200
+set lines=50 columns=100
+
+"indenting 
+set autoindent
+set smartindent
