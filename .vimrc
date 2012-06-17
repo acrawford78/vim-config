@@ -11,7 +11,7 @@ set backspace=indent,eol,start
 " The <Space> at the end of the map isn't required, but does help to separate the input from the "prompt".
 "  As the :buffer command is being used to perform the switch, the buffer name 
 "  could be used instead, if preferred.
-nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <F5> :w<CR>:buffers<CR>:buffer<Space>
 
 "spaces instead of tabs
 set expandtab
@@ -30,3 +30,4 @@ set lines=50 columns=100
 "indenting 
 set autoindent
 set smartindent
+set autowrite
