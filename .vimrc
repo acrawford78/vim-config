@@ -13,6 +13,9 @@ set backspace=indent,eol,start
 "  could be used instead, if preferred.
 nnoremap <F5> :w<CR>:buffers<CR>:buffer<Space>
 
+map <F2> :BufExplorer<CR>
+map <F3> :BufExplorerVerticalSplit<CR>
+
 "spaces instead of tabs
 set expandtab
 
@@ -35,7 +38,9 @@ set autoindent
 set smartindent
 set autowrite
 
-colorscheme peaksea
+colorscheme morning
+
+set number
 
 if has("gui_running")
   if has("gui_gtk2")
@@ -45,3 +50,8 @@ if has("gui_running")
   endif
 endif
 
+" CTRL-C are Copy
+vnoremap <C-C> "+y
+
+" CTRL-V are Paste
+map <C-V>   	"+gP
