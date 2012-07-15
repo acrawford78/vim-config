@@ -26,8 +26,9 @@ syntax on
 "set softtabstop=4
 
 "for the different file types
+filetype on
 autocmd FileType python set tabstop=4|set shiftwidth=4
-
+autocmd FileType sh set tabstop=4|set shiftwidth=4
 autocmd FileType c set tabstop=3|set shiftwidth=3
 
 "set size
@@ -55,3 +56,8 @@ vnoremap <C-C> "+y
 
 " CTRL-V are Paste
 map <C-V>   	"+gP
+
+" Use CTRL-S for saving, also in Insert mode
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
