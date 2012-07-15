@@ -16,6 +16,9 @@ nnoremap <F5> :w<CR>:buffers<CR>:buffer<Space>
 "spaces instead of tabs
 set expandtab
 
+"syntax on
+syntax on
+
 " makes the spaces feel like real tabs (backspace goes back 
 "set softtabstop=4
 
