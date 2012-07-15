@@ -34,3 +34,14 @@ set lines=50 columns=100
 set autoindent
 set smartindent
 set autowrite
+
+colorscheme peaksea
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Anonymous\ Pro\ 11
+  elseif has("gui_win32")
+    set guifont=Anonymous\ Pro:h11
+  endif
+endif
+
