@@ -38,17 +38,23 @@ set autoindent
 set smartindent
 set autowrite
 
+"fileformat
+set ffs=unix,dos
+set list
+
 "show trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+"highlight ExtraWhitespace ctermbg=red guibg=red
+"match ExtraWhitespace /\s\+$/
+"autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+"autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+"autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+"autocmd BufWinLeave * call clearmatches()
 
 "display search text
 set hlsearch
 
+map <c-m> <c-w>>
+map <c-l> <c-w><
 set number
 
 if has("gui_running")
@@ -61,16 +67,15 @@ if has("gui_running")
   elseif has("gui_win32")
     set guifont=Anonymous\ Pro:h10
   endif
+  " CTRL-C are Copy
+  vnoremap <C-C> "+y
+
+  " CTRL-P are Paste
+  map <C-P> "+gP
+
+  " Use CTRL-S for saving, exit insert mode after
+  noremap <C-S> :update<CR>
+  vnoremap <C-S> <C-C>:update<CR>
+  "jump out of insert mode
+  inoremap <C-S> <ESC>:update<CR>
 endif
-
-" CTRL-C are Copy
-vnoremap <C-C> "+y
-
-" CTRL-P are Paste
-map <C-P> "+gP
-
-" Use CTRL-S for saving, exit insert mode after
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-"jump out of insert mode
-inoremap <C-S> <ESC>:update<CR>
