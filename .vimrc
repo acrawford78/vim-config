@@ -57,10 +57,11 @@ map <c-m> <c-w>>
 map <c-l> <c-w><
 set number
 
+syntax enable
+
 if has("gui_running")
   "set size
   set lines=50 columns=100
-  colorscheme morning
 
   if has("gui_gtk2")
     set guifont=Anonymous\ Pro\ 10
@@ -78,4 +79,11 @@ if has("gui_running")
   vnoremap <C-S> <C-C>:update<CR>
   "jump out of insert mode
   inoremap <C-S> <ESC>:update<CR>
+else
+  "no italic in terminal
+  let g:solarized_termcolors=16
+  let g:solarized_italic=0
 endif
+set background=dark
+colorscheme solarized
+
