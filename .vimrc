@@ -86,4 +86,5 @@ else
 endif
 set background=dark
 colorscheme solarized
+autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
 
