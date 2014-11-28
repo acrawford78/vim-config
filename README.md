@@ -6,13 +6,13 @@ Clone into .vim
 
 2) In windows create a hard link in dos:
 
-mklink /H _vimrc .vim\.vimrc
+"mklink /H _vimrc .vim\\.vimrc"
 
 Windows vim uses _vimrc
 
 3) Create symbolic link for plugins etc:
 
-mklink /D vimfiles .vim
+"mklink /D vimfiles .vim"
 
 4) Modify file association
 ftype code="C:\Program Files\Vim\vim72\gvim.exe" --remote-silent "%1"
